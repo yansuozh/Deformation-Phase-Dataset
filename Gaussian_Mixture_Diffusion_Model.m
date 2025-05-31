@@ -138,7 +138,7 @@ end
 end
 
 
-% Multivariate Normal (Gaussian) Distribution
+% Multivariate Normal Gaussian Distribution
 function [y, logSqrtDetSigma, quadform] = elli_gaus(X, Mu, Sigma)
 
 if nargin<1
