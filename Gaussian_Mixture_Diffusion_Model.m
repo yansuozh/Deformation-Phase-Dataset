@@ -1,6 +1,6 @@
 % ***********************************************************************************************
-%   GMDM: Gaussian Mixture Diffusion Model used to simulate surface subsidence in mining areas.
-%   Programmed by YANSUO ZHANG at IEGO (CSIC-UCM)
+%   Gaussian Mixture Diffusion Model (GMDM) used to simulate surface subsidence in mining areas.
+%   Programmed by YANSUO ZHANG at IEGO (CSIC-UCM), Spain
 % ***********************************************************************************************
 
 function [result_GMDM] = Gaussian_Mixture_Diffusion_Model(sampleSize)
