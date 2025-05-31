@@ -58,7 +58,6 @@ gmm = gmm_weights * p_mat';
 origin_gmm = reshape(gmm', samp_size, samp_size);
 result_GMM_ori = origin_gmm / max(max(origin_gmm));
 
-% Diffusion Process
 gmm_mus = mu;
 gmm_covs = Sigma;
 
