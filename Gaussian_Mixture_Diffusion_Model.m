@@ -101,26 +101,20 @@ end_gmm = gmm_weights * p_mat';
 end_gmm = reshape(end_gmm', samp_size, samp_size);
 result_GMDM = end_gmm / max(max(end_gmm));
 
-% % Plot the initial distribution and the final distribution
 % figure;
 % subplot(1, 2, 1);
 % scatter(x_traj(:, 1, 1), x_traj(:, 2, 1), 5, 'filled');
 % title('Density of Target distribution $x_0$', 'Interpreter', 'latex');
-% axis equal;
-% 
 % subplot(1, 2, 2);
 % scatter(x_traj(:, 1, end), x_traj(:, 2, end), 5, 'filled');
 % title(['Density of $x_T$ samples after ' num2str(nsteps) ' step diffusion'], 'Interpreter', 'latex');
-% axis equal;
-% 
-% % Plot the diffusion trajectories
+
 % figure;
 % hold on;
 % for i = 1:size(x_traj, 1)
 %     plot(squeeze(x_traj(i, 1, :)), squeeze(x_traj(i, 2, :)), 'Color', [0, 0, 1, 0.1]);
 % end
 % title('Diffusion trajectories', 'Interpreter', 'latex');
-% axis equal;
 % hold off;
 
 end
