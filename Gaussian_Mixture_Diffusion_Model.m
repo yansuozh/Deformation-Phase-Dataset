@@ -53,7 +53,7 @@ end
 weights = rand(1, num_components);
 gmm_weights = weights / sum(weights);
 
-%% Generate the initial mixture of Gaussian distributions
+% Generate the initial mixture of Gaussian distributions
 for i = 1:num_components
     p{i} = elli_gaus(X, mu{i}, Sigma{i});
 end
@@ -62,7 +62,7 @@ gmm = gmm_weights * p_mat';
 origin_gmm = reshape(gmm', samp_size, samp_size);
 result_GMM_ori = origin_gmm / max(max(origin_gmm));
 
-%% Diffusion Process
+% Diffusion Process
 gmm_mus = mu;
 gmm_covs = Sigma;
 
@@ -93,7 +93,7 @@ for i = 2:nsteps
     x_traj(:, :, i) = x_traj(:, :, i-1) + eps_z * (dif_coef^t) * sqrt(dt);
 end
 
-%% Generate the final mixture of Gaussian distributions
+% Generate the final mixture of Gaussian distributions
 for i = 1:num_components
     p{i} = elli_gaus(X, gmm_mus{i}, gmm_covs_new{i});
 end
@@ -127,7 +127,7 @@ result_GMDM = end_gmm / max(max(end_gmm));
 end
 
 
-%% Sample from the Gaussian Mixture Model
+% Sample from the Gaussian Mixture Model
 function x = sample_gmm(num_samples, num_components, gmm_weights, gmm_mus, gmm_covs)
 x = [];
 for i = 1:num_components
@@ -138,7 +138,7 @@ end
 end
 
 
-%% Simulate the diffusion of the Gaussian Mixture Model at a given diffusion step t
+% Simulate the diffusion of the Gaussian Mixture Model at a given diffusion step t
 function [covs_dif] = diffusion_gmm(t, dif_coef, Sigma, gmm_weights)
 
 num_components = length(gmm_weights);
@@ -152,7 +152,7 @@ end
 end
 
 
-%% Multivariate Normal (Gaussian) Distribution
+% Multivariate Normal (Gaussian) Distribution
 function [y, logSqrtDetSigma, quadform] = elli_gaus(X, Mu, Sigma)
 
 if nargin<1
