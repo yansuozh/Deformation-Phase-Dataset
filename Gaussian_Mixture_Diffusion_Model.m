@@ -66,7 +66,7 @@ gmm_covs = Sigma;
 num_samples = 1000;
 x0 = sample_gmm(num_samples, num_components, gmm_weights, gmm_mus, gmm_covs);
 
-% Set diffusion parameters and the number of diffusion steps
+% Set the diffusion coefficient and the number of diffusion steps
 dif_coef = 5;
 nsteps = 50;
 dt = 1 / nsteps;
