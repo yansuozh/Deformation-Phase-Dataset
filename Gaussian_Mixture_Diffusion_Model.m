@@ -46,7 +46,6 @@ for i = 1:num_components
     % Sigma{i} = sigma * samp_size * 2;
 end
 
-% Set the weight of the Gaussian component
 weights = rand(1, num_components);
 gmm_weights = weights / sum(weights);
 
