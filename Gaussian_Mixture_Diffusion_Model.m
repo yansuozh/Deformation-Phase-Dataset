@@ -3,9 +3,7 @@
 %   Programmed by YANSUO ZHANG at IEGO (CSIC-UCM), Spain
 % ***********************************************************************************************
 
-function [result_GMDM] = Gaussian_Mixture_Diffusion_Model(sampleSize)
-
-samp_size = sampleSize;
+function [result_GMDM] = Gaussian_Mixture_Diffusion_Model(samp_size)
 
 [X1, X2] = meshgrid(1:samp_size, 1:samp_size);
 X = [X1(:) X2(:)];
