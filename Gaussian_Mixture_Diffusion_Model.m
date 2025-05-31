@@ -71,7 +71,6 @@ dif_coef = 5;
 nsteps = 50;
 dt = 1 / nsteps;
 
-% Initialize diffusion trajectory
 x_traj = zeros(size(x0, 1), size(x0, 2), nsteps);
 x_traj(:, :, 1) = x0;
 
