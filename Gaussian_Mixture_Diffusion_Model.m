@@ -116,7 +116,6 @@ result_GMDM = end_gmm / max(max(end_gmm));
 end
 
 
-% Sample from the Gaussian Mixture Model
 function x = sample_gmm(num_samples, num_components, gmm_weights, gmm_mus, gmm_covs)
 x = [];
 for i = 1:num_components
@@ -127,7 +126,6 @@ end
 end
 
 
-% Simulate the diffusion of the Gaussian Mixture Model at a given diffusion step t
 function [covs_dif] = diffusion_gmm(t, dif_coef, Sigma, gmm_weights)
 
 num_components = length(gmm_weights);
